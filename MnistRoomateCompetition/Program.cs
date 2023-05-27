@@ -5,15 +5,15 @@ using MnistRoomateCompetition;
 TrainingData[] data = MnistLoader.LoadData("./Data/train-images-idx3-ubyte", "./Data/train-labels-idx1-ubyte");
 // Test data, only used on competition day.
 // TrainingData[] data = MnistLoader.LoadData("./Data/t10k-images-idx3-ubyte", "./Data/t10k-labels-idx1-ubyte");
-RandomRecogniser recogniser = new RandomRecogniser();
+Frederik recogniser = new Frederik();
 
-// Train();
-Test();
+Train();
 // ViewData(true);
+Test();
 
 void Train()
 {
-    
+    recogniser.Train(data);
 }
 
 void Test()
